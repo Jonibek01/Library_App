@@ -121,5 +121,17 @@ public class User {
                 ", balance=" + balance +
                 '}';
     }
+    public String toString1() {
+        return "User{" +
+                "id='" + id + '\'' +
+                ", role=" + role +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + "******" + '\'' +
+                ", balance=" + balance +
+                '}';
+    }
+
 
 }
