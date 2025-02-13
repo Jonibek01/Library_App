@@ -24,15 +24,15 @@ public class DataSource {
 
     public static User currentUser;
     public static User getCurrentUser(){return currentUser;}
-    public static void setStrScanner(User user){currentUser = user;}
+    public static void setCurrentUser(User user){currentUser = user;}
 
     public static Section currentSection;
     public static Book currentBook;
 
     static {
-        users.add(new User(UUID.randomUUID().toString(), Role.ADMIN, "admin", "admin", "admin", "admin", new ArrayList<History>(), new ArrayList<Borrow>(), 500000.0 ));
-        users.add(new User(UUID.randomUUID().toString(), Role.USER, "a", "a", "a", "a", new ArrayList<History>(), new ArrayList<Borrow>(), 100000.0 ));
-        users.add(new User(UUID.randomUUID().toString(), Role.USER, "b", "b", "b", "b", new ArrayList<History>(), new ArrayList<Borrow>(), 200000.0 ));
+        users.add(new User(Role.ADMIN, "admin", "admin", "admin", "admin", new ArrayList<History>(), new ArrayList<Borrow>(), 500000.0 ));
+        users.add(new User(Role.USER, "a", "a", "a", "a", new ArrayList<History>(), new ArrayList<Borrow>(), 100000.0 ));
+        users.add(new User(Role.USER, "b", "b", "b", "b", new ArrayList<History>(), new ArrayList<Borrow>(), 200000.0 ));
     }
 
     static {
