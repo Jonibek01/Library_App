@@ -3,9 +3,10 @@ package entity;
 import entity.enums.Role;
 
 import java.util.List;
+import java.util.UUID;
 
 public class User {
-    private String id;
+    private String id = UUID.randomUUID().toString();
     private Role role=Role.USER;
     private String name;
     private String surname;
@@ -19,8 +20,7 @@ public class User {
     public User() {
     }
 
-    public User(String id, Role role, String name, String surname, String email, String password, List<History> histories, List<Borrow> borrowList, Double balance) {
-        this.id = id;
+    public User(Role role, String name, String surname, String email, String password, List<History> histories, List<Borrow> borrowList, Double balance) {
         this.role = role;
         this.name = name;
         this.surname = surname;
@@ -49,10 +49,6 @@ public class User {
 
     public void setRole(Role role) {
         this.role = role;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public String getName() {
