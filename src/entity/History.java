@@ -53,7 +53,7 @@ public class History {
         this.returnDate = returnDate;
     }
 
-    @Override
+ /*   @Override
     public String toString() {
         return "History{" +
                 "id='" + id + '\'' +
@@ -61,6 +61,12 @@ public class History {
                 ", borrowedDate=" + borrowedDate +
                 ", returnDate=" + returnDate +
                 '}';
+    }*/
+
+    @Override
+    public String toString() {
+        return "History{bookTitle='" + book.getTitle() + "', borrowedDate=" + borrowedDate + ", returnDate=" + returnDate + "}";
     }
+
 
 }
