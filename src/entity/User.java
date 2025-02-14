@@ -126,6 +126,18 @@ public class User {
     public String toString() {
         return "User{id='" + id + "', name='" + name + "', email='" + email + "'}";
     }
+    public String toString1() {
+        return "User{" +
+                "id='" + id + '\'' +
+                ", role=" + role +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + "******" + '\'' +
+                ", balance=" + balance +
+                '}';
+    }
+
 
 
 }
