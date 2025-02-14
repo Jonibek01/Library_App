@@ -72,7 +72,7 @@ public class Borrow {
         this.returnTime = returnTime;
     }
 
-    @Override
+   /* @Override
     public String toString() {
         return "Borrow{" +
                 "id='" + id + '\'' +
@@ -82,6 +82,13 @@ public class Borrow {
                 ", borrowedTime=" + borrowedTime +
                 ", returnTime=" + returnTime +
                 '}';
+    }*/
+
+    @Override
+    public String toString() {
+        return "Borrow{bookTitle='" + book.getTitle() + "', borrowState=" + borrowState + "}";
     }
+
+
 
 }

@@ -7,11 +7,11 @@ import java.util.UUID;
 
 public class User {
     private String id = UUID.randomUUID().toString();
-    private Role role=Role.USER;
+    private Role role = Role.USER;
     private String name;
     private String surname;
     private String email;
-    private Integer countBook=0;
+    private Integer countBook = 0;
     private String password;
     private List<History> histories;
     private List<Borrow> borrowList;
@@ -107,7 +107,7 @@ public class User {
         this.balance = balance;
     }
 
-    @Override
+   /* @Override
     public String toString() {
         return "User{" +
                 "id='" + id + '\'' +
@@ -120,6 +120,12 @@ public class User {
                 ", borrowList=" + borrowList +
                 ", balance=" + balance +
                 '}';
+    }*/
+
+    @Override
+    public String toString() {
+        return "User{id='" + id + "', name='" + name + "', email='" + email + "'}";
     }
+
 
 }

@@ -36,26 +36,28 @@ public class DataSource {
     }
 
     static {
-        ArrayList<Book> books = new ArrayList<>();
-        Section novel = new Section(UUID.randomUUID().toString(), "novel", books, SectionState.ENABLED);
+        ArrayList<Book> books1 = new ArrayList<>();
+        Section novel = new Section(UUID.randomUUID().toString(), "novel", books1, SectionState.ENABLED);
         Book book1 = new Book("War and Peace", "Anna Karenina", novel, 10);
         Book book2 = new Book("War and Peace 2", "Anna Karenina", novel, 10);
         book1.setAvailableBook(10);
         book2.setAvailableBook(5);
 
-        books.add(book1);
-        books.add(book2);
+        books1.add(book1);
+        books1.add(book2);
 
-        Section fantasy = new Section(UUID.randomUUID().toString(), "fantasy", books, SectionState.ENABLED);
+        ArrayList<Book> books2 = new ArrayList<>();
+        Section fantasy = new Section(UUID.randomUUID().toString(), "fantasy", books2, SectionState.ENABLED);
         Book book3 = new Book("A Game of Thrones", "George M", fantasy, 10);
         Book book4 = new Book("Tigana", "Gavriel K", fantasy, 5);
         book3.setAvailableBook(10);
         book4.setAvailableBook(5);
 
-        books.add(book3);
-        books.add(book4);
+        books2.add(book3);
+        books2.add(book4);
 
         sections.add(novel);
         sections.add(fantasy);
+
     }
 }
